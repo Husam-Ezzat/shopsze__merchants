@@ -1,0 +1,42 @@
+:root{
+    /* Colors Variables */
+    --grey-100:#F9FAFB;
+    --grey-300:#F5F5F5;
+    --grey-350:#E5E7EB;
+    --grey-400:#6B7280;
+    --grey-450:#F3F4F6;
+    --grey-500:#D1D5DB;
+    --grey-700:#4B5563;
+    --white-700:#fff;
+    --black-400:#16161D;
+    --black-500:#263238;
+    --black-600:#111928;
+    --black-700:#000;
+    --green-100:#e5fbf747;    ;
+    --green-500:#2CC7B1;
+    --red-100:#FDF2F2;
+    --red-500:#E02424;
+
+
+    /* Border Radius Variables */
+    --radius-xs:3px;
+    --radius-sm:4px;
+    --radius-md:6px;
+    --radius-lg:8px;
+    --radius-xl:10px;
+    --radius-2xl:16px;
+    --radius-rounded:50%;
+
+    /* Spacing Variables */
+    --spcae-xs:2px;
+    --space-sm:4px;
+    --space-md:8px;
+    --space-lg:8px;
+    --space-xl:10px;
+    --space-2xl:12px;
+    --space-3xl:14px;
+    --space-4xl:16px;
+    --space-5xl:18px;
+    --space-6xl:20px;
+
+}

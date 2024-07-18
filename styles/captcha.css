@@ -1,0 +1,10 @@
+.captha__container{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.captha__container img.code{
+    height: 135px;
+    width: auto;
+}

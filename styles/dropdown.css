@@ -1,0 +1,22 @@
+select {
+    width: 100%;
+    padding: var(--space-3xl) var(--space-4xl);
+    border: 1px solid var(--grey-500);
+    border-radius: var(--radius-lg);
+    background-color: var(--grey-100);
+    outline: none;
+    font-size: 1rem;
+    color: var(--black-500);
+    -webkit-appearance: none; /* For Chrome */
+    -moz-appearance: none; /* For Firefox */
+    appearance: none; /* Standard */
+    background-image: url('../assets/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right var(--space-4xl) center;
+    background-size: var(--space-2xl);
+    padding-right: calc(var(--space-4xl) + var(--space-3xl));
+}
+
+select::-ms-expand {
+    display: none; /* For IE */
+}

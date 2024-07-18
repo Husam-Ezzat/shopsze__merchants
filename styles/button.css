@@ -1,0 +1,19 @@
+
+button.submit__btn{
+    width:100%;
+    padding: var(--space-3xl) var(--space-4xl);
+    background-color:var(--green-500);
+    color:var(--white-700);
+    font-size:1rem;
+    border:none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+}
+.button__container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.button__container > button{
+    width: 50%;
+}
