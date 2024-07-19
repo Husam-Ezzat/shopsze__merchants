@@ -34,19 +34,19 @@
     font-size:1.1rem;
     color:var(--grey-700);
 }
-.owl-pagination {
-    margin: 3.1rem;
+.owl-dots {
+    margin: 3.1rem !important;
 }
-.owl-theme .owl-controls .owl-page span{
-    width: var(--space-3xl);
-    height: var(--space-3xl);
-    border-radius: var(--radius-rounded);
-    background-color:var(--grey-500);
+.owl-dots .owl-dot span{
+    width: var(--space-3xl) !important;
+    height: var(--space-3xl) !important;
+    border-radius: var(--radius-rounded) !important;
+    background-color:var(--grey-500) !important;
 }
-.owl-pagination .owl-page.active span{
-    width: var(--space-3xl);
-    height: var(--space-3xl);
-    background-color: var(--green-500);
+.owl-dots .owl-dot.active span{
+    width: var(--space-3xl) !important;
+    height: var(--space-3xl) !important;
+    background-color: var(--green-500) !important;
 }
 @media(width < 1200px){
     .carousel-title{

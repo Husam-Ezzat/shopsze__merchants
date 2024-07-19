@@ -44,5 +44,10 @@
 @media(width < 768px){
     #stepper__container{
         display: none;
+   }
+}
+@media(width < 1200px){
+    #stepper__container{
+        width: 30%;
     }
 }

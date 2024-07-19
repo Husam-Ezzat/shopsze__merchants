@@ -17,3 +17,9 @@ button.submit__btn{
 .button__container > button{
     width: 50%;
 }
+
+@media(width<= 470px){
+    .button__container > button{
+        width: 100%;
+    }
+}

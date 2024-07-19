@@ -41,7 +41,7 @@
                    <div class="file__actiions">
                     <span>Add Store Logo</span>
                     <div>
-                        <button id="addButton">
+                        <button id="addButton" onclick="document.getElementById('fileInput').click()"> 
                             <span>Add Image</span>
                         </button>
                         <button id="removeButton" onclick="removeImage()">
@@ -122,7 +122,7 @@
             </section>
        </main> 
        <script>
-        function previewImage(event) {
+    const  previewImage = (event) => {
     const input = event.target;
     const imagePreview = document.getElementById('imagePreview');
     const imageElement = document.getElementById('imageElement');
@@ -133,15 +133,15 @@
         const reader = new FileReader();
         reader.onload = function(e) {
             imageElement.src = e.target.result;
-            imageElement.style.display = 'block';
+            imageElement.style.display = 'flex';
             imagePreviewText.style.display = 'none';
-            removeButton.style.display = 'block';
+            removeButton.style.display = 'flex';
         }
         reader.readAsDataURL(input.files[0]);
     }
 }
 
-function removeImage() {
+const removeImage = () =>{
     const imagePreview = document.getElementById('imagePreview');
     const imageElement = document.getElementById('imageElement');
     const imagePreviewText = document.getElementById('imagePreviewText');
@@ -150,9 +150,8 @@ function removeImage() {
 
     imageElement.src = '';
     imageElement.style.display = 'none';
-    imagePreviewText.style.display = 'block';
+    imagePreviewText.style.display = 'flex';
     fileInput.value = '';
-    removeButton.style.display = 'none';
 }
 
        </script>

@@ -90,9 +90,17 @@ h1.page__tit , h1.page__tit a{
     margin:0 0 var(--space-6xl);
     display: flex;
 }
+h1.page__tit.center{
+    text-align:center;
+    display: flex;
+    justify-content: center;
+}
 h1.page__tit img{
     width: 1.875rem;
     height: 1.875rem;
+}
+[dir="rtl"] h1.page__tit img{
+    transform:rotate(180deg);
 }
 form p{
    font-size: 1rem;
@@ -101,6 +109,7 @@ form p{
 }
 form p.sub_tit{
     color:var(--grey-700);
+    margin: 1rem 2rem;
 }
 form p > a{
     color:var(--green-500);
@@ -110,6 +119,39 @@ form .checkbox_wrapper{
     justify-content: space-between;
     align-self: center;
     margin:var(--space-xl) 0;
+}
+#form__container.lg form{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+#form__container.lg2 form{
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+form table{
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid var(--grey-500);
+    border-radius: var(--radius-md);
+}
+form table tr td, form table tr th{
+    padding: 1rem;
+    font-size:.9rem;
+    color:var(--black-700);
+    font-weight:500;
+    text-align:center;
+}
+form table tr th:first-child{
+    text-align:left;
+}
+form table tr td div{
+    display:flex;
+    flex-flow:row nowrap;
+    column-gap:.6rem;
 }
 .checkbox_wrapper a{
     font-size: .9rem;
@@ -132,6 +174,10 @@ form .checkbox_wrapper{
     color:var(--black-500);
 }
 @media(width < 768px){
+    form{
+        width:100% !important;
+        margin:5rem auto 0;
+    }
     #form__container{
         width:100%;
     }
@@ -154,10 +200,32 @@ form .checkbox_wrapper{
     .input__wrapper .input__container{
         width: 100%;
     }
+    h1.page__tit, h1.page__tit a{
+        font-size:1.8rem;
+    }
 }
 @media(width < 1200px){
     form{
         width: calc(100% - 30px);
         margin:5rem auto 0;
+    }
+    #form__container.lg form{
+        width: 100%;
+    }
+}
+@media(width <= 470px){
+    form .input__wrapper{
+        flex-flow:row wrap;
+    }
+    form .input__wrapper .input__container{
+        width:100%
+    }
+  
+    form table tr td, form table tr th{
+        padding: .75rem 0;
+        font-size:.75rem;
+    }
+    form table tr td div{
+        column-gap:.3rem;
     }
 }
