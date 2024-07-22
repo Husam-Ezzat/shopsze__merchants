@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="styles/stepper.css">
     <link rel="stylesheet" href="styles/dropdown.css">
     <link rel="stylesheet" href="styles/toggle.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/checkbox.css">
+
     <title>Payment</title>
 
 </head>
@@ -126,7 +129,16 @@
                  </select>
             </div>
             <button class="submit__btn">Open Store</button>
-            </form>
+            <!---      sadcsaascadsc   -->
+            <div class="input__container">
+                <label for="">Password</label>
+                <input id="phone" type="tel" />
+                <span class="input__error">Email or password wronge</span>
+            </div>
+            
+
+        
+        </form>
         </section>
             <section id="stepper__container">
                 <div class="stepper__item">
@@ -146,6 +158,123 @@
                 </div>
             </section>
        </main> 
+       <!-- <style>
+        .progress-circle {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient(#4caf50 calc(var(--percentage) * 1%), #e0e0e0 0);
+        }
+
+        .progress-circle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .progress-circle::after {
+            content: attr(data-percentage) '%';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style> -->
+
+    <!-- <div class="progress-circle" style="--percentage: 75;" data-percentage="75"></div> -->
+
+    <div id="overlay__spinner">
+        <h3>All Done!</h3>
+        <p>Creating store maybe take two minutes, please wait!</p>
+        <div class="spinner"></div>
+    </div>
+<style>
+
+#overlay__spinner   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100000;
+    row-gap: 0;
+}
+#overlay__spinner  > h3{
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--black-500);
+    margin:0;
+}
+#overlay__spinner > p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black-500);
+    text-align: center;
+    max-width: 30rem;
+    line-height: 1.5;
+}
+.spinner {
+    border: .9rem solid var(--grey-350); /* Light grey */
+    border-top: 16px solid var(--green-500); /* Blue */
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+</style>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script>
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      initialCountry: "auto",
+      geoIpLookup: function(callback) {
+        fetch('https://ipinfo.io/json?token=<YOUR_TOKEN>')
+          .then((response) => response.json())
+          .then((data) => callback(data.country))
+          .catch(() => callback('us'));
+      },
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      preferredCountries: ["sa", "ae", "eg", "us"],
+      localizedCountries: { 'ar': 'أَرْجَنْتِين', 'en': 'Argentina' }, // Sample localization
+    });
+  </script>
+  <script>
+    const modal = document.getElementById("overlay");
+    const close = document.querySelector(".close");
+   
+    close.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+    modal.addEventListener("click", function(e) {
+        if (e.target.id === "overlay") {
+            modal.style.display = "none";
+        }
+    });
+  </script>
 
 </body>
 </html>
