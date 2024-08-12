@@ -1,0 +1,23 @@
+.merchant__info {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    max-width: 580px;
+}
+.merchant__info  h1{
+    font-size: 40px;
+    color:#111928;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.header__container{
+    margin:27px 24px;
+}
+@media(width <= 768px) {
+    .merchant__info {
+        max-width: calc(100% - 20px);
+    }
+    .header__container{
+        margin: 27px 20px;
+    }
+}
